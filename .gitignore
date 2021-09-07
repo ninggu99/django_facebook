@@ -1,5 +1,11 @@
+*.pyc
+*~
 __pycache__
-.DS_Store
+myvenv
 venv
+django_venv
+django_env
+db.sqlite3
+/static
+.DS_Store
 .vscode
-db.splite3
