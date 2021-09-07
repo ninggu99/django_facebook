@@ -136,13 +136,13 @@
             font-size: 18px;
         }
     </style>
-
+    {% load static %}
     <div class="header">
-        <div class="btn1"><a href="{% url 'new_feed' %}"><img src="/static/ic_pencil.jpg" width="22px" style="margin: 9px 0 0 13px;"></div></a>
+        <div class="btn1"><a href="{% url 'new_feed' %}"><img src="{% static 'ic_pencil.jpg' %}" width="22px" style="margin: 9px 0 0 13px;"></div></a>
         <div class="search">
             <input type="text" class="searchbar" placeholder="Search">
         </div>
-        <div class="btn2"><img src="/static/ic_info.jpg" width="22px" style="margin: 9px 0 0 13px;"></div>
+        <div class="btn2"><img src="{% static 'ic_info.jpg' %}" width="22px" style="margin: 9px 0 0 13px;"></div>
     </div>
 
     <div class="container">
@@ -160,10 +160,10 @@
     </div>
 
     <div class="footer">
-        <div class="tab1"><img src="/static/ic_feed.jpg" width="22px" style="margin-top: 15px;"></div>
-        <div class="tab2"><img src="/static/ic_person.jpg" width="22px" style="margin-top: 14px;"></div>
-        <div class="tab3"><img src="/static/ic_globe.jpg" width="22px" style="margin-top: 14px;"></div>
-        <div class="tab4"><img src="/static/ic_etc.jpg" width="22px" style="margin-top: 14px;"></div>
+        <div class="tab1"><img src="{% static 'ic_feed.jpg' %}" width="22px" style="margin-top: 15px;"></div>
+        <div class="tab2"><img src="{% static 'ic_person.jpg' %}" width="22px" style="margin-top: 14px;"></div>
+        <div class="tab3"><img src="{% static 'ic_globe.jpg' %}" width="22px" style="margin-top: 14px;"></div>
+        <div class="tab4"><img src="{% static 'ic_etc.jpg' %}" width="22px" style="margin-top: 14px;"></div>
     </div>
 </body>
 </html>

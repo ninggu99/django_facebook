@@ -104,12 +104,13 @@
         }
 
     </style>
+    {% load static %}
     <div class="header">
-        <div class="btn1"><a href="{% url 'new_feed' %}"><img src="/static/ic_pencil.jpg" width="22px" style="margin: 9px 0 0 13px;"></div></a>
+        <div class="btn1"><a href="{% url 'new_feed' %}"><img src="{% static 'ic_pencil.jpg' %}" width="22px" style="margin: 9px 0 0 13px;"></div></a>
         <div class="search">
             <input type="text" class="searchbar" placeholder="Search">
         </div>
-        <div class="btn2"><img src="/static/ic_info.jpg" width="22px" style="margin: 9px 0 0 13px;"></div>
+        <div class="btn2"><img src="{% static 'ic_info.jpg' %}" width="22px" style="margin: 9px 0 0 13px;"></div>
     </div>
     <div class="container">
         {% for feed in articles %}
@@ -119,16 +120,16 @@
             <a href="/feed/{{ feed.pk }}" class="title">{{ feed.title }}</a>
             <p class="content">{{ feed.text }}</p><a class="more" href="/feed/{{ feed.pk }}">더 보기</a>
             <div class="accessory">
-                <img src="/static/ic_like.jpg" width="16px"> Like <img src="/static/ic_comment.jpg" width="16px"> Comments
+                <img src="{% static 'ic_like.jpg' %}" width="16px"> Like <img src="{% static 'ic_comment.jpg' %}" width="16px"> Comments
             </div>
         </div>
         {% endfor %}
     </div>
     <div class="footer">
-        <div class="tab1"><img src="/static/ic_feed.jpg" width="22px" style="margin-top: 15px;"></div>
-        <div class="tab2"><img src="/static/ic_person.jpg" width="22px" style="margin-top: 14px;"></div>
-        <div class="tab3"><img src="/static/ic_globe.jpg" width="22px" style="margin-top: 14px;"></div>
-        <div class="tab4"><img src="/static/ic_etc.jpg" width="22px" style="margin-top: 14px;"></div>
+        <div class="tab1"><img src="{% static 'ic_feed.jpg' %}" width="22px" style="margin-top: 15px;"></div>
+        <div class="tab2"><img src="{% static 'ic_person.jpg' %}" width="22px" style="margin-top: 14px;"></div>
+        <div class="tab3"><img src="{% static 'ic_globe.jpg' %}" width="22px" style="margin-top: 14px;"></div>
+        <div class="tab4"><img src="{% static 'ic_etc.jpg' %}" width="22px" style="margin-top: 14px;"></div>
     </div>
 </body>
 </html>
